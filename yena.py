@@ -86,12 +86,25 @@ setup(
 )
 
                 """
+        main_txt = '''
+import click
 
+@click.command()
+@click.option("--count", default=1, help="Number of greetings.")
+@click.option("--name", prompt="Your name",
+              help="The person to greet.")
+def cli(count, name):
+    """Simple program that greets NAME for a total of COUNT times."""
+    for _ in range(count):
+        click.echo("Hello, %s!" % name)
+                '''
 
         txt = txt.format(str(name),str(version),str(pymods),str(requires),str(name))
         setup_py = Path(rootfolder + '/setup.py')
         setup_py.write_text(txt)
+        Path(rootfolder + '/main.py').write_text(main_txt)
 
+        
         click.echo(" Project is Ready!!! ")
         click.echo(" Visit https://click.palletsprojects.com/en/7.x/ for futher help!! ")
         click.echo(" Happy Hacktober!!! ")
