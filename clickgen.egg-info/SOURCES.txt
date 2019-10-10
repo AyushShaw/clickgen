@@ -1,8 +1,0 @@
-setup.py
-yena.py
-clickgen.egg-info/PKG-INFO
-clickgen.egg-info/SOURCES.txt
-clickgen.egg-info/dependency_links.txt
-clickgen.egg-info/entry_points.txt
-clickgen.egg-info/requires.txt
-clickgen.egg-info/top_level.txt
